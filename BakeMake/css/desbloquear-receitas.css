@@ -1,0 +1,144 @@
+
+.img-div-bolo,
+.img-div-pao,
+.img-div-cookie,
+.img-div-cachorro,
+.img-div-pizza,
+.img-div-chocolate {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.receita-desbloqueada {
+  display: block !important;
+  opacity: 1 !important;
+  animation: desbloquear 1s ease-out;
+  transform: scale(1);
+}
+
+@keyframes desbloquear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) rotate(-10deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.texto-bloqueado {
+  color: #888 !important;
+  font-style: italic;
+  opacity: 0.8;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px dashed #ccc;
+  transition: all 0.3s ease;
+}
+
+.texto-bloqueado:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: #999;
+  transform: scale(1.02);
+}
+
+.receita-desbloqueada-texto {
+  color: #fff !important;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.trofeu1,
+.trofeu2 {
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.todas-receitas-completas .trofeu1,
+.todas-receitas-completas .trofeu2 {
+  display: block;
+  animation: brilhar 2s infinite, aparecer 1s ease-out;
+}
+
+/* Animação dos troféus */
+@keyframes brilhar {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.08);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+  }
+  70% {
+    transform: scale(1.2) rotate(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.todas-receitas-completas {
+  background: linear-gradient(45deg, 
+    rgba(255, 215, 0, 0.1) 0%, 
+    transparent 25%, 
+    transparent 75%, 
+    rgba(255, 215, 0, 0.1) 100%);
+  background-size: 40px 40px;
+  animation: fundo-dourado 10s linear infinite;
+}
+
+@keyframes fundo-dourado {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.receita-misteriosa {
+  position: relative;
+}
+
+.receita-misteriosa::before {
+  content: "🔒";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 24px;
+  background: #ff4444;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: balancer 2s ease-in-out infinite;
+}
+
+@keyframes balancer {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
