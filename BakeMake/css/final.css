@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #fff5e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "VT323", monospace;
+}
+
+.popup {
+  position: relative;
+  background-color: #f7a440; /* tom mais culinário */
+  width: 55vw;
+  height: 40vh;
+  padding: 3% 4%;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3.5vw;
+  color: #fff;
+  margin: 0 0 1vh 0;
+}
+
+.subtext {
+  font-size: 2.5vw;
+  color: #fff;
+  margin-bottom: 1vh;
+}
+
+.highlight {
+  font-size: 2.4vw;
+  color: #ffd700;
+  font-weight: bold;
+  text-shadow: 1px 1px #b27f00;
+  margin-bottom: 1vh;
+}
+
+.popup p {
+  font-size: 2.2vw;
+  color: #fff;
+  margin: 1vh 0;
+  line-height: 1.4;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  font-size: 1vw;
+  font-weight: bold;
+  padding: 0.5vw 1vw;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
